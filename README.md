@@ -47,7 +47,8 @@ Aussme total running time is from 0 through 999, the project will catch the "int
 The "process arrival" event occurs every time a process arrives, i.e., based on the initial arrival time and when a process completes I/O. In other words, processes "arrive" within the subsystem that consists of the CPU and the ready queue. <br>
 The "process preemption" event occurs every time a process is preempted by a time slice expiration (in RR) or by an arriving process (in SRT). When a preemption occurs, a context switch occurs (unless for RR there are no available processes in the ready queue). <br>
 ## 3.File
-The only file is main.cpp, which contains seven arguments: <br>
+### 3.1 main.cpp
+This is basic project code, which contains seven arguments: <br>
 First: Seed to generate pesudo-random numbers  <br>
 Second: Parameter to generate exponential distribution <br>
 Third: Bound of the exponential distribution, any generated values above this should be skipped <br>
@@ -57,5 +58,13 @@ Sixth: Coefficient for the CPU to predict the running time for SJF and SRF <br>
 Seventh: Time slice for RR <br>
 Eighth: For RR algorithm, define whether processes are added to the end or the beginning of the ready queue when they arrive or complete I/O. This optional command-line
 argument, is set to either "BEGINNING" or "END", with "END" being the default behavior. <br>
-
-
+### 3.2 q_1/2/3_modified_main.cpp
+These are the code that modified from main.cpp, they help to test and answer the specific analysis questions.
+### 3.3 makefile
+Compile file for cpp files.
+### 3.4 simout.txt
+Some of the statistical result.
+### 3.5 question_2/3.py
+Python code for simply visulization the statistical result.
+### 3.6 all-tests.sh
+Compile and quick test for python files.
